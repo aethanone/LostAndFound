@@ -1,0 +1,16 @@
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\bin\Debug\lostnfound.exe.config
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.csprojResolveAssemblyReference.cache
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.Form1.resources
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.Home.resources
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.Properties.Resources.resources
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.csproj.GenerateResource.Cache
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\bin\Debug\lostnfound.exe
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\bin\Debug\lostnfound.pdb
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.exe
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.pdb
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.view.resources
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.Report.resources
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\bin\Debug\MySql.Data.dll
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\bin\Debug\MySql.Data.xml
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.admin.resources
+c:\users\jed\onedrive\documents\visual studio 2015\Projects\lostnfound\lostnfound\obj\Debug\lostnfound.adminAllview.resources
