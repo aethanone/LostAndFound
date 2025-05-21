@@ -24,38 +24,38 @@ namespace lostnfound
             try
             {
                 string constring = "Server=localhost;Database=lostnfound;Uid=root;Pwd=";
-                string sql = "SELECT * FROM items WHERE id=@id";  // Use parameterized query
+                string sql = "SELECT * FROM items WHERE id=@id";  
                 MySqlConnection con = new MySqlConnection(constring);
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
-                // Add parameter to prevent SQL injection
+                
                 cmd.Parameters.AddWithValue("@id", txtId.Text);
 
                 con.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read()) // Only proceed if item is found
+                if (reader.Read()) 
                 {
-                    // Read data from the "items" table
-                    string type = reader.GetString("type");
+                    
+                    string type = "Claimed";
                     string category = reader.GetString("category");
                     string title = reader.GetString("title");
                     string date = reader.GetString("date");
                     string location = reader.GetString("location");
                     string person_name = reader.GetString("person_name");
                     string person_contact = reader.GetString("person_contact");
-                    byte[] imageBytes = reader["image"] as byte[]; // Cast the image bytes
+                    byte[] imageBytes = reader["image"] as byte[]; 
 
-                    reader.Close(); // Close the reader before the next query
+                    reader.Close(); 
 
                     try
                     {
-                        // Insert into "found" table
+                        
                         string createSql = "INSERT INTO found(type, category, title, date, location, person_name, person_contact) VALUES(@type, @category, @title, @date, @location, @person_name, @person_contact)";
                         using (MySqlConnection createCon = new MySqlConnection(constring))
                         using (MySqlCommand createCmd = new MySqlCommand(createSql, createCon))
                         {
-                            // Add parameters for insertion
+                            
                             createCmd.Parameters.AddWithValue("@type", type);
                             createCmd.Parameters.AddWithValue("@category", category);
                             createCmd.Parameters.AddWithValue("@title", title);
@@ -63,10 +63,10 @@ namespace lostnfound
                             createCmd.Parameters.AddWithValue("@location", location);
                             createCmd.Parameters.AddWithValue("@person_name", person_name);
                             createCmd.Parameters.AddWithValue("@person_contact", person_contact);
-                            createCmd.Parameters.AddWithValue("@image", imageBytes ?? (object)DBNull.Value);  // Use DBNull.Value if image is null
+                            createCmd.Parameters.AddWithValue("@image", imageBytes ?? (object)DBNull.Value);  
 
                             createCon.Open();
-                            createCmd.ExecuteNonQuery(); // Insert the record into the "found" table
+                            createCmd.ExecuteNonQuery();
                         }
 
                         MessageBox.Show("Item has been transferred to history!!", "Message Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -78,20 +78,19 @@ namespace lostnfound
 
                     try
                     {
-                        // Delete from "items" table after insertion
                         string delSql = "DELETE FROM items WHERE id=@id";
                         using (MySqlConnection delCon = new MySqlConnection(constring))
                         using (MySqlCommand delCmd = new MySqlCommand(delSql, delCon))
                         {
-                            // Add parameter to delete the item
+                            
                             delCmd.Parameters.AddWithValue("@id", txtId.Text);
 
                             delCon.Open();
-                            int rowsAffected = delCmd.ExecuteNonQuery();  // Execute the DELETE query
+                            int rowsAffected = delCmd.ExecuteNonQuery();  
 
                             if (rowsAffected > 0)
                             {
-                                MessageBox.Show("Item has been successfully removed from the 'items' table.", "Message Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Item has been successfully claimed!.", "Message Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
@@ -120,7 +119,7 @@ namespace lostnfound
 
         private void load()
         {
-            dtgView.Rows.Clear(); // Clear existing rows in DataGridView
+            dtgView.Rows.Clear(); 
             dtgView.Refresh();
 
             string constring = "Server=localhost;Database=lostnfound;Uid=root;Pwd=";
@@ -141,16 +140,16 @@ namespace lostnfound
                             string category = reader.GetString("category");
                             string date = reader.GetString("date");
 
-                            // Handle location (NULL check)
+                            
                             string location = reader.IsDBNull(reader.GetOrdinal("location")) ? "" : reader.GetString("location");
 
-                            // Add row to DataGridView
+                            
                             dtgView.Rows.Add(id, type, category, date, location);
                         }
                     }
                 }
 
-                // Clear input fields
+               
                 txtContact.Clear();
                 cbxCategory.SelectedIndex = -1;
                 txtDate.Clear();
@@ -241,7 +240,7 @@ namespace lostnfound
                 reader = cmd.ExecuteReader();
                 con.Close();
 
-                MessageBox.Show("Succesfully Turn over!!", "Message Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Succesfully Updated!!", "Message Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception error)
             {
@@ -259,5 +258,55 @@ namespace lostnfound
         {
             load();
         }
+
+        
+             private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedType = comboBox2.SelectedItem.ToString();
+            dtgView.Rows.Clear(); 
+
+            string constring = "Server=localhost;Database=lostnfound;Uid=root;Pwd=";
+            string sql;
+
+            if (selectedType == "All")
+            {
+                sql = "SELECT id, type, category, date, location FROM items";
+            }
+            else
+            {
+                sql = "SELECT id, type, category, date, location FROM items WHERE type = @type";
+            }
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(constring))
+                using (MySqlCommand cmd = new MySqlCommand(sql, con))
+                {
+                    if (selectedType != "All")
+                    {
+                        cmd.Parameters.AddWithValue("@type", selectedType);
+                    }
+
+                    con.Open();
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int id = reader.GetInt32("id");
+                            string type = reader.GetString("type");
+                            string category = reader.GetString("category");
+                            string date = reader.GetString("date");
+                            string location = reader.IsDBNull(reader.GetOrdinal("location")) ? "" : reader.GetString("location");
+
+                            dtgView.Rows.Add(id, type, category, date, location);
+                        }
+                    }
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Filter error: " + error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
-}
+    }

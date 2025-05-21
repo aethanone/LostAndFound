@@ -66,5 +66,17 @@ namespace admin
                 MessageBox.Show("Connection error: " + error.Message, "Message Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void ExportAsImage(String path) {
+            using (Bitmap bnp = new Bitmap(this.Width, this.Height)) {
+                this.DrawToBitmap(bnp, new Rectangle(0, 0, this.Width, this.Height));
+                bnp.Save(path);
+            }
+        }
     }
+
 }

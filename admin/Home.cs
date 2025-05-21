@@ -17,6 +17,10 @@ namespace lostnfound
         {
 
             InitializeComponent();
+            refresh();
+        }
+
+        public void refresh() {
             try
             {
                 string constring = "Server=localhost;Database=lostnfound;Uid=root;Pwd=";
@@ -71,7 +75,6 @@ namespace lostnfound
             }
         }
 
-
         private void Home_Load(object sender, EventArgs e)
         {
 
@@ -85,6 +88,16 @@ namespace lostnfound
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            refresh();
         }
     }
 }

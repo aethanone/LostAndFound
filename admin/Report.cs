@@ -50,7 +50,7 @@ namespace lostnfound
             {
                 string imagePath = openFileDialog.FileName;
 
-                // Step 2: Convert image to byte array
+               
                 byte[] imageBytes = File.ReadAllBytes(imagePath);
                 try
                 {
@@ -74,9 +74,12 @@ namespace lostnfound
                     MessageBox.Show("Connection error: " + error.Message, "Message Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            // Format the DateTime as a string
-           
             
+        }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

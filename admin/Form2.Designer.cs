@@ -31,11 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrint = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnView = new System.Windows.Forms.Button();
             this.BtnReport = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             // btnPrint
             // 
             this.btnPrint.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(3, 400);
+            this.btnPrint.Location = new System.Drawing.Point(0, 400);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(283, 68);
             this.btnPrint.TabIndex = 5;
@@ -74,6 +74,16 @@
             this.label1.Size = new System.Drawing.Size(226, 62);
             this.label1.TabIndex = 4;
             this.label1.Text = "        BULSU\r\nLOST AND FOUND\r\n";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::admin.Properties.Resources.bulsulogo1;
+            this.pictureBox1.Location = new System.Drawing.Point(95, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // btnView
             // 
@@ -115,16 +125,6 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(970, 740);
             this.MainPanel.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::admin.Properties.Resources.bulsulogo1;
-            this.pictureBox1.Location = new System.Drawing.Point(95, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // Form2
             // 

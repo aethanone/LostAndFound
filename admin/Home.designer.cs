@@ -32,6 +32,7 @@
             this.lbnFound = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -77,12 +78,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(449, 197);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::admin.Properties.Resources.refres;
+            this.button1.Location = new System.Drawing.Point(862, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(66, 44);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::admin.Properties.Resources.bulsubg;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Home";
@@ -101,5 +114,6 @@
         private System.Windows.Forms.Label lbnFound;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
     }
 }

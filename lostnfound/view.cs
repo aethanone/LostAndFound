@@ -73,6 +73,7 @@ namespace lostnfound
                                     }
                                     txtName.Text = person_name;
                                     txtContact.Text = person_contact;
+                                    txtTitle.Text = title;
                                 }
                             }
                         }
@@ -232,6 +233,60 @@ namespace lostnfound
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedType = comboBox1.SelectedItem.ToString(); // "ALL", "LOST", or "FOUND"
+            dtgView.Rows.Clear(); // Clear current rows
+
+            string constring = "Server=localhost;Database=lostnfound;Uid=root;Pwd=";
+            string sql;
+
+            if (selectedType == "All")
+            {
+                sql = "SELECT id, type, category, date, location FROM items";
+            }
+            else
+            {
+                sql = "SELECT id, type, category, date, location FROM items WHERE type = @type";
+            }
+
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(constring))
+                using (MySqlCommand cmd = new MySqlCommand(sql, con))
+                {
+                    if (selectedType != "All")
+                    {
+                        cmd.Parameters.AddWithValue("@type", selectedType);
+                    }
+
+                    con.Open();
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int id = reader.GetInt32("id");
+                            string type = reader.GetString("type");
+                            string category = reader.GetString("category");
+                            string date = reader.GetString("date");
+                            string location = reader.IsDBNull(reader.GetOrdinal("location")) ? "" : reader.GetString("location");
+
+                            dtgView.Rows.Add(id, type, category, date, location);
+                        }
+                    }
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Filter error: " + error.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            load();
         }
     }
 }

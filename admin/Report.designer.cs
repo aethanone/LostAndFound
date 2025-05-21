@@ -203,6 +203,7 @@
             // 
             // cbxCategory
             // 
+            this.cbxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCategory.FormattingEnabled = true;
             this.cbxCategory.Items.AddRange(new object[] {
             "",
@@ -217,6 +218,7 @@
             // 
             // cbxType
             // 
+            this.cbxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxType.FormattingEnabled = true;
             this.cbxType.Items.AddRange(new object[] {
             "",
@@ -241,6 +243,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Report";
             this.Size = new System.Drawing.Size(970, 740);
+            this.Load += new System.EventHandler(this.Report_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

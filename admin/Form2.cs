@@ -51,6 +51,7 @@ namespace admin
         {
             res res = new res();
             res.Show();
+            res.ExportAsImage("C:\\Users\\Jed\\OneDrive\\Documents\\history.png");
         }
     }
 }

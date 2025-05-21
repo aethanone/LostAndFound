@@ -56,6 +56,8 @@
             this.cbxType = new System.Windows.Forms.ComboBox();
             this.txtLoad = new System.Windows.Forms.Button();
             this.picPhoto = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPhoto)).BeginInit();
             this.SuspendLayout();
@@ -292,7 +294,7 @@
             this.btnFound.Name = "btnFound";
             this.btnFound.Size = new System.Drawing.Size(187, 50);
             this.btnFound.TabIndex = 44;
-            this.btnFound.Text = "Found";
+            this.btnFound.Text = "Claim";
             this.btnFound.UseVisualStyleBackColor = true;
             this.btnFound.Click += new System.EventHandler(this.btnFound_Click);
             // 
@@ -341,11 +343,35 @@
             this.picPhoto.TabIndex = 23;
             this.picPhoto.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 48;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "All",
+            "Lost",
+            "Found"});
+            this.comboBox2.Location = new System.Drawing.Point(669, 35);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(276, 24);
+            this.comboBox2.TabIndex = 49;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // adminAllview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::admin.Properties.Resources.bulsubg;
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtLoad);
             this.Controls.Add(this.cbxCategory);
             this.Controls.Add(this.cbxType);
@@ -408,5 +434,7 @@
         private System.Windows.Forms.ComboBox cbxCategory;
         private System.Windows.Forms.ComboBox cbxType;
         private System.Windows.Forms.Button txtLoad;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

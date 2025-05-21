@@ -32,6 +32,7 @@
             this.lbnFound = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             // 
             this.lbnFound.AutoSize = true;
             this.lbnFound.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnFound.Location = new System.Drawing.Point(47, 72);
+            this.lbnFound.Location = new System.Drawing.Point(33, 72);
             this.lbnFound.Name = "lbnFound";
             this.lbnFound.Size = new System.Drawing.Size(358, 34);
             this.lbnFound.TabIndex = 2;
@@ -77,11 +78,24 @@
             this.panel2.Size = new System.Drawing.Size(449, 197);
             this.panel2.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::lostnfound.Properties.Resources.refres1;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.Location = new System.Drawing.Point(886, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(66, 44);
+            this.button1.TabIndex = 24;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::lostnfound.Properties.Resources.bulsubg2;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "Home";
@@ -100,5 +114,6 @@
         private System.Windows.Forms.Label lbnFound;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
     }
 }
