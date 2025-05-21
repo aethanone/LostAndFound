@@ -17,6 +17,10 @@ namespace lostnfound
         {
 
             InitializeComponent();
+            load();
+        }
+
+        public void load() {
             try
             {
                 string constring = "Server=localhost;Database=lostnfound;Uid=root;Pwd=";
@@ -32,7 +36,7 @@ namespace lostnfound
                             if (reader.Read())
                             {
                                 int total = reader.GetInt32("total");
-                                lbnLost.Text = "Reported Lost Item: " + total;
+                                lbnLost.Text = "Reported Lost Item: \n" + "             " + total;
                             }
                         }
                     }
@@ -59,7 +63,7 @@ namespace lostnfound
                             if (reader.Read())
                             {
                                 int total = reader.GetInt32("total");
-                                lbnFound.Text = "Reported Lost Item: " + total;
+                                lbnFound.Text = "Reported Found Item: \n" + "             " + total;
                             }
                         }
                     }
@@ -85,6 +89,11 @@ namespace lostnfound
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            load();
         }
     }
 }

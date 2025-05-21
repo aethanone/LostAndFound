@@ -49,7 +49,7 @@ namespace admin
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            res res = new res();
+            HistoryReportMain res = new HistoryReportMain();
             res.Show();
         }
     }

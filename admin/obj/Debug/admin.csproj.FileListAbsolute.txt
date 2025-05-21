@@ -15,3 +15,25 @@ C:\Users\Jed\OneDrive\Documents\Visual Studio 2015\Projects\admin\admin\obj\Debu
 C:\Users\Jed\OneDrive\Documents\Visual Studio 2015\Projects\admin\admin\obj\Debug\admin.Form2.resources
 C:\Users\Jed\OneDrive\Documents\Visual Studio 2015\Projects\admin\admin\obj\Debug\admin.reciept.resources
 C:\Users\Jed\OneDrive\Documents\Visual Studio 2015\Projects\admin\admin\obj\Debug\admin.res.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\bin\Debug\admin.exe.config
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\bin\Debug\admin.exe
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\bin\Debug\admin.pdb
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\bin\Debug\MySql.Data.dll
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\bin\Debug\MySql.Data.xml
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.csproj.AssemblyReference.cache
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\lostnfound.Form1.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\lostnfound.adminAllview.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.Form2.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.History_report.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\lostnfound.Home.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.Properties.Resources.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.reciept.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\lostnfound.Report.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.res.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.csproj.GenerateResource.cache
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.csproj.Up2Date
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.exe
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.pdb
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.HistoryReportMain.resources
+C:\Users\Administrator\Source\Repos\LostAndFound\admin\obj\Debug\admin.PrintHistoryReport.resources

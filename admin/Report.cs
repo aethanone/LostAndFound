@@ -78,5 +78,10 @@ namespace lostnfound
            
             
         }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
