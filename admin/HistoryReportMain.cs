@@ -30,7 +30,7 @@ namespace admin
         private void button1_Click(object sender, EventArgs e)
         {
             History_report report = new History_report();
-            report.ExportAsImage("C:\\Users\\Administrator\\Documents\\history.png");
+            report.ExportAsImage("C:\\Users\\chris\\Documents\\history.png");
             MessageBox.Show("Print successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

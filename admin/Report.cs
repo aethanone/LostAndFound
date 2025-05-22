@@ -83,5 +83,15 @@ namespace lostnfound
         {
 
         }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>admin</RootNamespace>
     <AssemblyName>admin</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -179,6 +179,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bulsubg.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BulSU_wordmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparentbg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
